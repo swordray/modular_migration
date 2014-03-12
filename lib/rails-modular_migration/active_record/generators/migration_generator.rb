@@ -6,8 +6,11 @@ module ActiveRecord
       def create_migration_file
         set_local_assigns!
         validate_file_name!
-        migration = FileUtils.mkdir_p(File.join("db/migrate", table_name.singularize.split('_')))
-        migration_template @migration_template, File.join(migration, "#{file_name}.rb")
+        migration = table_name.singularize.split('_') if migration_action.match(/(add|remove)/)
+        migration = join_tables.map(&:singularize).join('_') if migration_action.match(/join/)
+        migration = FileUtils.mkdir_p(migration) if migration
+        migration_file = File.join("db/migrate", migration.join('/'), "#{file_name}.rb")
+        migration_template @migration_template, migration_file
       end
 
     end
