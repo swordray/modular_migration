@@ -8,7 +8,7 @@ Automatic generation of migration directory.
 ## Requirements
 
 * Ruby ~> 2.0
-* Rails ~> 3.2
+* Rails
 
 ## Installation
 
