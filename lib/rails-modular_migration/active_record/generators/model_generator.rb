@@ -1,4 +1,3 @@
-require 'rails/generators/active_record/model/model_generator'
 module ActiveRecord
   module Generators # :nodoc:
     class ModelGenerator < Base # :nodoc:
