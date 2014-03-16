@@ -17,9 +17,9 @@ module ActiveRecord
               modular = result.join.camelize.safe_constantize if index == table.size-1
             end
             break if modular
-          end
+          end unless modular
           migration = modular ? modular.to_s.underscore : []
-        end unless modular
+        end
         migration = join_tables.map(&:singularize).join('_') if migration_action.match(/join/)
         migration = FileUtils.mkdir_p(migration) if migration
         migration_file = File.join("db/migrate", migration.join('/'), "#{file_name}.rb")
