@@ -3,7 +3,7 @@
 [![DependencyStatus](https://gemnasium.com/user-tony/rails-modular_migration.png?travis)](https://gemnasium.com/user-tony/rails-modular_migration)
 [![Code Climate](https://codeclimate.com/github/user-tony/rails-modular_migration.png)](https://codeclimate.com/github/user-tony/rails-modular_migration)
 
-Automatic generation of migration directory.
+The modular model and migration file.
 
 ## Requirements
 
@@ -21,19 +21,20 @@ Include the gem in your Gemfile:
 Do nothing.
 
 ## Example
-    rails g model core/user name:string
 
+ Generator Model File
+
+    $ rails g model core/user name:string
     invoke  active_record
-    create    app/models/core/user.rb
-    create    app/models/core.rb
-    create    db/migrate/core/user/20140311041213_create_core_users_.rb
-
-  
-## Contributors
-
-Special thanks to
-
-* http://www.ihaveu.com/home team
+    create  app/models/core/user.rb
+    create  app/models/core.rb
+    create  db/migrate/core/user/20140324105328_create_core_users.rb
+    
+ Generator Migration File
+ 
+    $ rails g migration AddGenderToCoreUser gender:integer
+    invoke  active_record
+    create  db/migrate/core/user/20140324105719_add_gender_to_core_user.rb
 
 ## License
 
