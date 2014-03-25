@@ -3,7 +3,7 @@
 [![DependencyStatus](https://gemnasium.com/swordray/modular_migration.png?travis)](https://gemnasium.com/swordray/modular_migration)
 [![Code Climate](https://codeclimate.com/github/swordray/modular_migration.png)](https://codeclimate.com/github/swordray/modular_migration)
 
-ModularMigration is dependent on Rails sub-module, that migration files Generation to relevant modular directory, so easy to migrate files modular management.
+Rails migration file is generated to the relevant module directory.
 
 ## Requirements
 
