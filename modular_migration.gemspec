@@ -8,8 +8,8 @@ Gem::Specification.new do |s|
   s.author = ['Lijia Tong']
   s.email = ["user_tony@163.com"]
   s.homepage = "https://github.com/user-tony/modular_migration"
-  s.summary = "Modularization migration file."
-  s.description = ""
+  s.summary = "Rails migration file is generated to the relevant module directory."
+  s.description = "ModularMigration is dependent on Rails sub-module, that migration files Generation to relevant modular directory, so easy to migrate files modular management."
   s.license = "MIT"
 
   s.files = `git ls-files`.split("\n")
