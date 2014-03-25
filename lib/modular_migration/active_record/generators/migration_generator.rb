@@ -21,8 +21,8 @@ module ActiveRecord
           migration = modular ? modular.to_s.underscore : []
         end
         migration = join_tables.map(&:singularize).join('_') if migration_action.match(/join/)
-        migration = FileUtils.mkdir_p(migration) if migration
-        migration_file = File.join("db/migrate", migration.join('/'), "#{file_name}.rb")
+        migration = FileUtils.mkdir_p("db/migrate/#{migration}") if migration
+        migration_file = File.join(migration.join('/'), "#{file_name}.rb")
         migration_template @migration_template, migration_file
       end
 

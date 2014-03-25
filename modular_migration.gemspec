@@ -1,15 +1,15 @@
 $LOAD_PATH.push File.expand_path("../lib", __FILE__)
-require 'rails-modular_migration/version'
+require 'modular_migration/version'
 
 Gem::Specification.new do |s|
-  s.name = "rails-modular_migration"
-  s.version = RailsModularMigration::VERSION
+  s.name = "modular_migration"
+  s.version = ModularMigration::VERSION
   s.platform = Gem::Platform::RUBY
   s.author = ['Lijia Tong']
   s.email = ["user_tony@163.com"]
-  s.homepage = "https://github.com/user-tony/rails-modular_migration"
-  s.summary = "Modularization migration file."
-  s.description = ""
+  s.homepage = "https://github.com/user-tony/modular_migration"
+  s.summary = "Rails migration file is generated to the relevant module directory."
+  s.description = "ModularMigration is dependent on Rails sub-module, that migration files Generation to relevant modular directory, so easy to migrate files modular management."
   s.license = "MIT"
 
   s.files = `git ls-files`.split("\n")
