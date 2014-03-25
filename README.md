@@ -1,9 +1,9 @@
 # modular_migration
-[![Gem Version](https://badge.fury.io/rb/modular_migration.png)](http://badge.fury.io/rb/modular_migration) [![Build Status](https://secure.travis-ci.org/user-tony/modular_migration.png?branch=master)](http://travis-ci.org/user-tony/modular_migration)
-[![DependencyStatus](https://gemnasium.com/user-tony/modular_migration.png?travis)](https://gemnasium.com/user-tony/modular_migration)
-[![Code Climate](https://codeclimate.com/github/user-tony/modular_migration.png)](https://codeclimate.com/github/user-tony/modular_migration)
+[![Gem Version](https://badge.fury.io/rb/modular_migration.png)](http://badge.fury.io/rb/modular_migration) [![Build Status](https://secure.travis-ci.org/swordray/modular_migration.png?branch=master)](http://travis-ci.org/swordray/modular_migration)
+[![DependencyStatus](https://gemnasium.com/swordray/modular_migration.png?travis)](https://gemnasium.com/swordray/modular_migration)
+[![Code Climate](https://codeclimate.com/github/swordray/modular_migration.png)](https://codeclimate.com/github/swordray/modular_migration)
 
-Generated Rails migration files into relevant modular directory.
+ModularMigration is dependent on Rails sub-module, that migration files Generation to relevant modular directory, so easy to migrate files modular management.
 
 ## Requirements
 
@@ -13,8 +13,8 @@ Generated Rails migration files into relevant modular directory.
 ## Installation
 
 Include the gem in your Gemfile:
-```bash
-    gem 'modular_migration'
+```ruby
+gem 'modular_migration'
 ```
 ## Usage
 
@@ -81,7 +81,7 @@ $ rails g scaffold office/human/person
   invoke  scss
   create    app/assets/stylesheets/scaffolds.css.scss
 ```
-## Creates
+## Credits
   [LiJia.Tong](https://github.com/user-tony/) @[Ihaveu](https://github.com/ihaveu)
   
 ## License
