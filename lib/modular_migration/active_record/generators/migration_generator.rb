@@ -21,7 +21,7 @@ module ActiveRecord
           migration = modular ? modular.to_s.underscore : []
         end
         migration = join_tables.map(&:singularize).join('_') if migration_action.match(/join/)
-        migration = FileUtils.mkdir_p(File.join("db/migrate", migration)) if migration
+        migration = FileUtils.mkdir_p(File.join("db", "migrate", migration)) if migration
         migration_file = File.join(migration.join('/'), "#{file_name}.rb")
         template_file = Rails.version.to_i < 4 ? 'migration.rb' : '../../migration/templates/create_table_migration.rb'
         migration_template template_file, migration_file
