@@ -4,7 +4,7 @@ module ActiveRecord
 
       def create_migration_file
         set_local_assigns!
-        validate_file_name!
+        validate_file_name! if self.respond_to?(:validate_file_name)
         if migration_action.match(/(add|remove)/)
           table = table_name.singularize
           modular = table.gsub(/_/, '/').camelize.safe_constantize
@@ -21,12 +21,12 @@ module ActiveRecord
           migration = modular ? modular.to_s.underscore : []
         end
         migration = join_tables.map(&:singularize).join('_') if migration_action.match(/join/)
-        migration = FileUtils.mkdir_p("db/migrate/#{migration}") if migration
+        migration = FileUtils.mkdir_p(File.join("db/migrate", migration)) if migration
         migration_file = File.join(migration.join('/'), "#{file_name}.rb")
-        migration_template @migration_template, migration_file
+        template_file = Rails.version.to_i < 4 ? 'migration.rb' : '../../migration/templates/create_table_migration.rb'
+        migration_template template_file, migration_file
       end
 
     end
   end
 end
-
