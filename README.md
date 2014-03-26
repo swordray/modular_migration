@@ -3,7 +3,7 @@
 [![DependencyStatus](https://gemnasium.com/swordray/modular_migration.png?travis)](https://gemnasium.com/swordray/modular_migration)
 [![Code Climate](https://codeclimate.com/github/swordray/modular_migration.png)](https://codeclimate.com/github/swordray/modular_migration)
 
-ModularMigration is dependent on Rails sub-module, that migration files Generation to relevant modular directory, so easy to migrate files modular management.
+Rails migration files generates into relevant modular directory
 
 ## Requirements
 
@@ -13,76 +13,39 @@ ModularMigration is dependent on Rails sub-module, that migration files Generati
 ## Installation
 
 Include the gem in your Gemfile:
+
 ```ruby
 gem 'modular_migration'
 ```
+
 ## Usage
 
 Do nothing.
 
 ## Example
 
-* Generator model file.
-```bash
-$ rails g model core/user name:string
-```
-```bash
-  invoke  active_record
-  create  app/models/core/user.rb
-  create  app/models/core.rb
-  create  db/migrate/core/user/20140324105328_create_core_users.rb
-```
-* Generator migration file.
-```bash
-$ rails g migration AddGenderToCoreUser gender:integer
-```
-```bash
-  invoke  active_record
-  create  db/migrate/core/user/20140324105719_add_gender_to_core_user.rb
-```
-* Generator scaffold file.
-```bash
-$ rails g scaffold office/human/person
-```
-```
-  invoke  active_record
-  create    app/models/office/human/person.rb
-  create    app/models/office/human.rb
-  create    db/migrate/office/human/person/20140325022901_create_office_human_people.rb
-  invoke  resource_route
-  route    namespace :office do
-    namespace :human do
-      resources :people
-      end
-    end
-  invoke  scaffold_controller
-  create    app/controllers/office/human/people_controller.rb
-  invoke    erb
-  create      app/views/office/human/people
-  create      app/views/office/human/people/index.html.erb
-  create      app/views/office/human/people/edit.html.erb
-  create      app/views/office/human/people/show.html.erb
-  create      app/views/office/human/people/new.html.erb
-  create      app/views/office/human/people/_form.html.erb
-  invoke    test_unit
-  create      test/controllers/office/human/people_controller_test.rb
-  invoke    helper
-  create      app/helpers/office/human/people_helper.rb
-  invoke      test_unit
-  create        test/helpers/office/human/people_helper_test.rb
-  invoke    jbuilder
-  create      app/views/office/human/people/index.json.jbuilder
-  create      app/views/office/human/people/show.json.jbuilder
-  invoke  assets
-  invoke    coffee
-  create      app/assets/javascripts/office/human/people.js.coffee
-  invoke    scss
-  create      app/assets/stylesheets/office/human/people.css.scss
-  invoke  scss
-  create    app/assets/stylesheets/scaffolds.css.scss
-```
+- Generate model
+    
+    ```bash
+    $ rails g model core/user name:string
+    invoke  active_record
+    create    app/models/core/user.rb
+    create    app/models/core.rb
+    create    db/migrate/core/user/20140324105328_create_core_users.rb
+    ```
+
+- Generate migration
+    
+    ```bash
+    $ rails g migration AddGenderToCoreUser gender:integer
+    invoke  active_record
+    create    db/migrate/core/user/20140324105719_add_gender_to_core_user.rb
+    ```
+
 ## Credits
-  [LiJia.Tong](https://github.com/user-tony/) @[Ihaveu](https://github.com/ihaveu)
+
+- [LiJia.Tong](https://github.com/user-tony/) @[ihaveu](https://www.ihaveu.com/home)
+- [swordray](https://github.com/swordray) @[ihaveu](http://www.ihaveu.com/home) @[shuhai](http://tw.shuhai.org/) @[leaf](http://leaf.iacger.com)
   
 ## License
 

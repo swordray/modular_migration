@@ -1,3 +1,4 @@
+*.gem
 *.rbc
 *.sassc
 .sass-cache
@@ -13,6 +14,7 @@ capybara-*.html
 /coverage/
 /spec/tmp/*
 **.orig
+Gemfile.lock
 rerun.txt
 pickle-email-*.html
 .project
