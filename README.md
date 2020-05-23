@@ -41,11 +41,6 @@ Do nothing.
     invoke  active_record
     create    db/migrate/core/user/20140324105719_add_gender_to_core_user.rb
     ```
-
-## Credits
-
-- [LiJia.Tong](https://github.com/user-tony/) @[ihaveu](https://www.ihaveu.com/home)
-- [swordray](https://github.com/swordray) @[ihaveu](http://www.ihaveu.com/home) @[shuhai](http://tw.shuhai.org/) @[leaf](http://leaf.iacger.com)
   
 ## License
 
