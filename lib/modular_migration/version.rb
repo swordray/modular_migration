@@ -1,3 +1,3 @@
 module ModularMigration
-  VERSION = '0.0.4'
+  VERSION = '0.1.0'
 end

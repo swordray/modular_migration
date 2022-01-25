@@ -25,7 +25,7 @@ Do nothing.
 ## Example
 
 - Generate model
-    
+
     ```bash
     $ rails g model core/user name:string
     invoke  active_record
@@ -35,13 +35,17 @@ Do nothing.
     ```
 
 - Generate migration
-    
+
     ```bash
     $ rails g migration AddGenderToCoreUser gender:integer
     invoke  active_record
     create    db/migrate/core/user/20140324105719_add_gender_to_core_user.rb
     ```
-  
+
+## Sponsors
+
+* [BaiLu ShuYuan](https://bailushuyuan.org)
+
 ## License
 
 Copyright © 2014 Lijia Tong <user_tony@163.com> under The [MIT License](http://opensource.org/licenses/MIT).

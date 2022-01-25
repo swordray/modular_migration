@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.platform = Gem::Platform::RUBY
   s.author = ['Lijia Tong']
   s.email = ["user_tony@163.com"]
-  s.homepage = "https://github.com/user-tony/modular_migration"
+  s.homepage = "https://bailushuyuan.org"
   s.summary = "Rails migration files generates into relevant modular directory"
   s.description = "Rails migration files generates into relevant modular directory."
   s.license = "MIT"
